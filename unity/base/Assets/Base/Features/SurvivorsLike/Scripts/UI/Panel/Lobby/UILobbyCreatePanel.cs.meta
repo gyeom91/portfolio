@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 8c3311614a128634d9c507f311e06956
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _changedLobbyObserver: {fileID: 11400000, guid: 2cf96168309f3cc4d8f84a98c37577dc, type: 2}
+  - _lobbyNameInputField: {instanceID: 0}
+  - _maxPlayerSlider: {instanceID: 0}
+  - _closeBtn: {instanceID: 0}
+  - _createBtn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

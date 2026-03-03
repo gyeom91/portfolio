@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 0fdfacd4916038a4aaae358323582805
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _loginObserver: {fileID: 11400000, guid: 8875b980bcfc93d4f96ac35c50da60de, type: 2}
+  - _progressGroup: {instanceID: 0}
+  - _progressText: {instanceID: 0}
+  - _progressSlider: {instanceID: 0}
+  - _loginBtnGroup: {instanceID: 0}
+  - _btnSignIn: {instanceID: 0}
+  - _btnGuest: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

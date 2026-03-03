@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 469c24fdb3bd6431b92cc1465bd9166b, type: 3}
+  m_Name: RemoteConfigDataStoreAsset
+  m_EditorClassIdentifier: 
+  _rsKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e18e1fda-9a25-49fc-9a92-24e8e572b1b3\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"HeartbeatTime\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": 15.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"908f0962-9776-4ce4-ac55-5911dd7b2701\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"FreezeTime\",\r\n      \"type\": \"float\",\r\n      \"value\": 30.0\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"55c5a30c-21aa-4fed-9d22-0913b92cb822\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"InvincibleDuration\",\r\n      \"type\":
+    \"float\",\r\n      \"value\": 3.0\r\n    }\r\n  }\r\n]"
+  _rsLastCachedKeyList: "[\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"e18e1fda-9a25-49fc-9a92-24e8e572b1b3\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"HeartbeatTime\",\r\n      \"type\": \"float\",\r\n     
+    \"value\": 15.0\r\n    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\":
+    \"908f0962-9776-4ce4-ac55-5911dd7b2701\"\r\n    },\r\n    \"rs\": {\r\n     
+    \"key\": \"FreezeTime\",\r\n      \"type\": \"float\",\r\n      \"value\": 30.0\r\n   
+    }\r\n  },\r\n  {\r\n    \"metadata\": {\r\n      \"entityId\": \"55c5a30c-21aa-4fed-9d22-0913b92cb822\"\r\n   
+    },\r\n    \"rs\": {\r\n      \"key\": \"InvincibleDuration\",\r\n      \"type\":
+    \"float\",\r\n      \"value\": 3.0\r\n    }\r\n  }\r\n]"
+  _environments: "[\r\n  {\r\n    \"projectId\": \"d32ff5b0-5690-47ab-884f-a574519833d2\",\r\n   
+    \"name\": \"production\",\r\n    \"id\": \"d14df84f-4dab-438d-9c0f-bd63dac7819b\",\r\n   
+    \"isDefault\": true,\r\n    \"createdAt\": \"2025-06-11T10:17:55Z\",\r\n    \"updatedAt\":
+    \"2025-06-11T10:17:55Z\"\r\n  }\r\n]"

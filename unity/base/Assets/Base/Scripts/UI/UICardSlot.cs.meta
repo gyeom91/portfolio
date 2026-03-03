@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 4c3aed09987b5a94cb6016f5242cab1f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _uICardPrefab: {fileID: 5896749825164972629, guid: 670729a88e1282341989055215286c4f, type: 3}
+  - _poolServiceObserver: {fileID: 11400000, guid: acb3be23d947a584d89647c666dff54b, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

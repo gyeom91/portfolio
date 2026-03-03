@@ -1,0 +1,160 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Default
+  m_GUID: d7f3420ec9757b441b21c638e5e7e785
+  m_SerializeEntries:
+  - m_GUID: 1499091e3bc89d04bac1ada34e3b065e
+    m_Address: Battle_Wizard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 18e2cc8531f716542a6a9f24d6c4bac3
+    m_Address: Shield
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e38a148a877ae74f921ae5e2ad14fb5
+    m_Address: Lobby_Knight
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ee7c73c88bdf054cbecc98ad72ac91d
+    m_Address: Exp
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f2d36ff103553047862ced03031d4bc
+    m_Address: Lobby_Skeletonzombie
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 788b2eb2b592e03458710811e734575e
+    m_Address: Lobby_Demon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88129a0fafb67ba4e8969b63047f7133
+    m_Address: Battle_Knight
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 92951283d6453e443a86f1c44ff69143
+    m_Address: Lobby_Maw
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 969c679e33f66874cab8c88f6142c1e8
+    m_Address: Arrow
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 997e25d67f3ccb1478ff8955031e0345
+    m_Address: Battle_Mutant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a59d63d660878e545940fcaf28385f2f
+    m_Address: Lobby_Vampire
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a877d2a2bc5a1bd4198118d632d9c6b6
+    m_Address: Battle_Warrok
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9a5e54ce318943458db91cc76085386
+    m_Address: Lobby_Nightshade
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c03857c8227705546b75d357211d2930
+    m_Address: Battle_Nightshade
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cacbe289ef6ac1641907e5d4c49c6925
+    m_Address: Battle_Vampire
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cca040df2b4a5d9459100aa99033bce3
+    m_Address: Lobby_Warrok
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6324790dca3f9b47a5e79187089c436
+    m_Address: Battle_Demon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6367fe8d4882cb45a663d56675f048a
+    m_Address: Battle_Maw
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e91ef51170d3b584baf9fe31962d79c4
+    m_Address: Lobby_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9ee65dcb9e89a04298c0894e351fc59
+    m_Address: Lobby_Wizard
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f58cc42536591034eaa3acd23d8d5d6e
+    m_Address: Battle_Skeletonzombie
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f720c212d81ff4647a8edb8a9cb3011a
+    m_Address: Battle_Archer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdb52353e0edf1247a6cf54c6ed2529e
+    m_Address: Lobby_Mutant
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - default
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: d073886e81f335543beb28e261da1f44, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 0a9810ec7fabe3e43997e09c93f3314b, type: 2}

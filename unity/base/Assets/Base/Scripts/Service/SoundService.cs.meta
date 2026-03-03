@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a57e7a313363f4043ad0c6d9e0fa4232
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _poolServiceObserver: {fileID: 11400000, guid: acb3be23d947a584d89647c666dff54b, type: 2}
+  - _soundControllerPrefab: {fileID: 7943823579704892485, guid: 3c043ef76fe64ce40a40893432d9c0fe, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

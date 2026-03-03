@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f2c38186812398b4b92aa0b10a50966a
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _creatingLobbyObserver: {fileID: 11400000, guid: 2cf96168309f3cc4d8f84a98c37577dc, type: 2}
+  - _closeBtn: {instanceID: 0}
+  - _refreshBtn: {instanceID: 0}
+  - _createBtn: {instanceID: 0}
+  - _searchLobbyElementParent: {instanceID: 0}
+  - _uISearchLobbyElementPrefab: {fileID: 5501063444143825879, guid: 7b0bfe91393232f41b4247a2d706ef31, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

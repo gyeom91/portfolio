@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f24d19706d9309542ac32477f26cb226
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _lobbyObserver: {fileID: 11400000, guid: 276a6c8c854ff6349988f53679c6fc75, type: 2}
+  - _lengthTMPro: {instanceID: 0}
+  - _lobbyNameTMPro: {instanceID: 0}
+  - _hostNameTMPro: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

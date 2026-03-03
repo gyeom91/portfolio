@@ -1,0 +1,12 @@
+D:\Projects\Repository\unity\base\CloudCode\Project\bin\Release\net6.0\linux-x64\CloudCode.deps.json
+D:\Projects\Repository\unity\base\CloudCode\Project\bin\Release\net6.0\linux-x64\CloudCode.dll
+D:\Projects\Repository\unity\base\CloudCode\Project\bin\Release\net6.0\linux-x64\CloudCode.pdb
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCode.csproj.AssemblyReference.cache
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCode.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCode.AssemblyInfoInputs.cache
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCode.AssemblyInfo.cs
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCode.csproj.CoreCompileInputs.cache
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCode.dll
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\refint\CloudCode.dll
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\CloudCode.pdb
+D:\Projects\Repository\unity\base\CloudCode\Project\obj\Release\net6.0\linux-x64\ref\CloudCode.dll

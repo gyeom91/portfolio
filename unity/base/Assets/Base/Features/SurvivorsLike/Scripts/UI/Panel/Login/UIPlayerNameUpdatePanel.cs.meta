@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 202c402186c4a1441bc0e239ca7d6d68
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _nicknamePanelObserver: {fileID: 11400000, guid: a4fc78c894f2e2b40abd2074a659fe73, type: 2}
+  - _nicknameField: {instanceID: 0}
+  - _confirmBtn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

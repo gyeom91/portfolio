@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 41707bf14cf6d154d829e544a21d5eb1
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _poolServiceObserver: {fileID: 11400000, guid: acb3be23d947a584d89647c666dff54b, type: 2}
+  - _lookAtControllerPrefab: {fileID: 8947036099385567366, guid: a36618cc9c380ab43aa8f68adc170f0e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

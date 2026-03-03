@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Projects\\Repository\\unity\\base\\CloudCode\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{839275AE-8A9F-431B-BA3B-BBACA7599602}|Project\\CloudCode.csproj|d:\\projects\\repository\\unity\\base\\cloudcode\\project\\economymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839275AE-8A9F-431B-BA3B-BBACA7599602}|Project\\CloudCode.csproj|solutionrelative:project\\economymodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839275AE-8A9F-431B-BA3B-BBACA7599602}|Project\\CloudCode.csproj|d:\\projects\\repository\\unity\\base\\cloudcode\\project\\moduleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839275AE-8A9F-431B-BA3B-BBACA7599602}|Project\\CloudCode.csproj|solutionrelative:project\\moduleconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{839275AE-8A9F-431B-BA3B-BBACA7599602}|Project\\CloudCode.csproj|d:\\projects\\repository\\unity\\base\\cloudcode\\project\\response\\economyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{839275AE-8A9F-431B-BA3B-BBACA7599602}|Project\\CloudCode.csproj|solutionrelative:project\\response\\economyresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\Response\\EconomyResponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\BaseModule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Projects\\ModuleConfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EconomyResponse.cs",
+              "DocumentMoniker": "D:\\Projects\\Response\\EconomyResponse.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Response\\EconomyResponse.cs",
+              "ToolTip": "D:\\Projects\\Response\\EconomyResponse.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Response\\EconomyResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:59:13.788Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EconomyResponse.cs",
+              "DocumentMoniker": "D:\\Projects\\Repository\\unity\\base\\CloudCode\\Project\\Response\\EconomyResponse.cs",
+              "RelativeDocumentMoniker": "Project\\Response\\EconomyResponse.cs",
+              "ToolTip": "D:\\Projects\\Repository\\unity\\base\\CloudCode\\Project\\Response\\EconomyResponse.cs",
+              "RelativeToolTip": "Project\\Response\\EconomyResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:59:10.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EconomyModule.cs",
+              "DocumentMoniker": "D:\\Projects\\Repository\\unity\\base\\CloudCode\\Project\\EconomyModule.cs",
+              "RelativeDocumentMoniker": "Project\\EconomyModule.cs",
+              "ToolTip": "D:\\Projects\\Repository\\unity\\base\\CloudCode\\Project\\EconomyModule.cs",
+              "RelativeToolTip": "Project\\EconomyModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:57:45.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BaseModule.cs",
+              "DocumentMoniker": "D:\\Projects\\BaseModule.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\BaseModule.cs",
+              "ToolTip": "D:\\Projects\\BaseModule.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\BaseModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:57:29.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ModuleConfig.cs",
+              "DocumentMoniker": "D:\\Projects\\ModuleConfig.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\ModuleConfig.cs",
+              "ToolTip": "D:\\Projects\\ModuleConfig.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\ModuleConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:57:01.012Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ModuleConfig.cs",
+              "DocumentMoniker": "D:\\Projects\\Repository\\unity\\base\\CloudCode\\Project\\ModuleConfig.cs",
+              "RelativeDocumentMoniker": "Project\\ModuleConfig.cs",
+              "ToolTip": "D:\\Projects\\Repository\\unity\\base\\CloudCode\\Project\\ModuleConfig.cs",
+              "RelativeToolTip": "Project\\ModuleConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-17T08:56:58.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

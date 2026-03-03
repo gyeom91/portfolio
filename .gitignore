@@ -1,0 +1,21 @@
+﻿#	Unity
+unity/builds
+unity/*/CCDBuildData
+unity/*/Library
+unity/*/Logs
+unity/*/obj
+unity/*/Temp
+unity/*/UserSettings
+unity/*/*.vs
+unity/*/*.vsconfig
+unity/*/*.csproj
+unity/*/*.sln
+
+#	Unreal
+unreal/*/*.vs
+unreal/*/Binaries
+unreal/*/DerivedDataCache
+unreal/*/Intermediate
+unreal/*/Saved
+unreal/*/*.vsconfig
+unreal/*/*.sln

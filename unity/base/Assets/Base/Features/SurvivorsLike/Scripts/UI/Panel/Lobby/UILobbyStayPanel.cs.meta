@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 8e0818e20a13a40419b6895be2b007f6
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _hostLobbyObserver: {fileID: 11400000, guid: 33b3fb56ae9dc514fac4e577e660bf83, type: 2}
+  - _closeBtn: {instanceID: 0}
+  - _uIJoinedPlayerElementParent: {instanceID: 0}
+  - _uIJoinedPlayerElementPrefab: {fileID: 366245219216869692, guid: f0200461d706a024a9f0f2a74dd748f8, type: 3}
+  - _startBtn: {instanceID: 0}
+  - _addBotBtn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,231 @@
+{
+  "LocalizeData": [
+    {
+      "Key": "PLAY",
+      "English(en)": "Play",
+      "Japanese(ja)": "遊ぶ",
+      "Korean(ko)": "시작"
+    }
+  ],
+  "CharacterData": [
+    {
+      "Key": "Archer",
+      "Health": "150",
+      "Damage": "20",
+      "Speed": "2"
+    },
+    {
+      "Key": "Knight",
+      "Health": "200",
+      "Damage": "25",
+      "Speed": "2.25"
+    },
+    {
+      "Key": "Wizard",
+      "Health": "100",
+      "Damage": "35",
+      "Speed": "1.75"
+    },
+    {
+      "Key": "Demon",
+      "Health": "100",
+      "Damage": "10",
+      "Speed": "1.5"
+    },
+    {
+      "Key": "Maw",
+      "Health": "100",
+      "Damage": "10",
+      "Speed": "1.5"
+    },
+    {
+      "Key": "Mutant",
+      "Health": "100",
+      "Damage": "10",
+      "Speed": "1.5"
+    },
+    {
+      "Key": "Nightshade",
+      "Health": "100",
+      "Damage": "10",
+      "Speed": "1.5"
+    },
+    {
+      "Key": "Skeletonzombie",
+      "Health": "100",
+      "Damage": "10",
+      "Speed": "1.5"
+    },
+    {
+      "Key": "Vampire",
+      "Health": "100",
+      "Damage": "10",
+      "Speed": "1.5"
+    },
+    {
+      "Key": "Warrok",
+      "Health": "100",
+      "Damage": "10",
+      "Speed": "1.5"
+    }
+  ],
+  "HeroData": [
+    {
+      "Key": "Archer",
+      "ExpSensor": "2",
+      "Level": "1"
+    },
+    {
+      "Key": "Knight",
+      "ExpSensor": "3.5",
+      "Level": "2"
+    },
+    {
+      "Key": "Wizard",
+      "ExpSensor": "3",
+      "Level": "1"
+    }
+  ],
+  "ExpData": [
+    {
+      "Key": "0",
+      "Value": "10",
+      "Addressable": "NetworkExp"
+    },
+    {
+      "Key": "1",
+      "Value": "30",
+      "Addressable": "NetworkExp"
+    },
+    {
+      "Key": "2",
+      "Value": "50",
+      "Addressable": "NetworkExp"
+    },
+    {
+      "Key": "3",
+      "Value": "100",
+      "Addressable": "NetworkExp"
+    }
+  ],
+  "LevelingData": [
+    {
+      "Key": "1",
+      "Exp": "100",
+      "Rate": "2"
+    },
+    {
+      "Key": "2",
+      "Exp": "150",
+      "Rate": "2"
+    },
+    {
+      "Key": "3",
+      "Exp": "200",
+      "Rate": "2"
+    },
+    {
+      "Key": "4",
+      "Exp": "300",
+      "Rate": "2"
+    }
+  ],
+  "AttributeUpgradeData": [
+    {
+      "Key": "0",
+      "Status": "Health",
+      "Rank": "Normal",
+      "Type": "Add",
+      "Value": "50",
+      "Description": null
+    },
+    {
+      "Key": "1",
+      "Status": "Health",
+      "Rank": "Rare",
+      "Type": "Add",
+      "Value": "100",
+      "Description": null
+    },
+    {
+      "Key": "2",
+      "Status": "Health",
+      "Rank": "Unique",
+      "Type": "Add",
+      "Value": "200",
+      "Description": null
+    },
+    {
+      "Key": "3",
+      "Status": "Health",
+      "Rank": "Legend",
+      "Type": "Add",
+      "Value": "300",
+      "Description": null
+    },
+    {
+      "Key": "4",
+      "Status": "Damage",
+      "Rank": "Normal",
+      "Type": "Add",
+      "Value": "5",
+      "Description": null
+    },
+    {
+      "Key": "5",
+      "Status": "Damage",
+      "Rank": "Rare",
+      "Type": "Add",
+      "Value": "10",
+      "Description": null
+    },
+    {
+      "Key": "6",
+      "Status": "Damage",
+      "Rank": "Unique",
+      "Type": "Add",
+      "Value": "15",
+      "Description": null
+    },
+    {
+      "Key": "7",
+      "Status": "Damage",
+      "Rank": "Legend",
+      "Type": "Add",
+      "Value": "20",
+      "Description": null
+    },
+    {
+      "Key": "8",
+      "Status": "Speed",
+      "Rank": "Normal",
+      "Type": "Multiple",
+      "Value": "0.03",
+      "Description": null
+    },
+    {
+      "Key": "9",
+      "Status": "Speed",
+      "Rank": "Rare",
+      "Type": "Multiple",
+      "Value": "0.05",
+      "Description": null
+    },
+    {
+      "Key": "10",
+      "Status": "Speed",
+      "Rank": "Unique",
+      "Type": "Multiple",
+      "Value": "0.08",
+      "Description": null
+    },
+    {
+      "Key": "11",
+      "Status": "Speed",
+      "Rank": "Legend",
+      "Type": "Multiple",
+      "Value": "0.1",
+      "Description": null
+    }
+  ]
+}

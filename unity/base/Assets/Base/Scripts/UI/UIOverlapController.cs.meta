@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 18e4ec6b4a3ee10488b424011265fc0d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _poolServiceObserver: {fileID: 11400000, guid: acb3be23d947a584d89647c666dff54b, type: 2}
+  - _uIOverlapElementPrefab: {instanceID: 0}
+  - _uIOverlapElementGroupPrefab: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

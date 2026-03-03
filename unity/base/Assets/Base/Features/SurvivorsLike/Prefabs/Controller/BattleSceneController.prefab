@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3458318770018081216
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 117264055201540194, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: _nodes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 117264055201540194, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: '_nodes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c832164af3cb204393134f7150ce171, type: 2}
+    - target: {fileID: 117264055201540194, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: '_nodes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bed06bd82efd2a04982466fed12b8327, type: 2}
+    - target: {fileID: 117264055201540194, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: '_nodes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2651e6d6d8893b34d818189397ecf61a, type: 2}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2033173781363956383, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5279224111487224912, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: m_Name
+      value: BattleSceneController
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014597711206594309, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: _nodes.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014597711206594309, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: '_nodes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c832164af3cb204393134f7150ce171, type: 2}
+    - target: {fileID: 9014597711206594309, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: '_nodes.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11400000, guid: bed06bd82efd2a04982466fed12b8327, type: 2}
+    - target: {fileID: 9014597711206594309, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: '_nodes.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 2651e6d6d8893b34d818189397ecf61a, type: 2}
+    - target: {fileID: 9014597711206594309, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: _container.Nodes.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014597711206594309, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      propertyPath: '_container.Nodes.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 1c832164af3cb204393134f7150ce171, type: 2}
+    m_RemovedComponents:
+    - {fileID: 8778223848811997810, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+    - {fileID: 9014597711206594309, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5279224111487224912, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2271001834077366126}
+  m_SourcePrefab: {fileID: 100100000, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+--- !u!1 &7403346878603056528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5279224111487224912, guid: 99056c35b5639da459fc47b3a6699864, type: 3}
+  m_PrefabInstance: {fileID: 3458318770018081216}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2271001834077366126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7403346878603056528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54dbbf6b58bccea46bf81a95cc09589e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SurvivorsLike::BattleSceneController
+  _networkManagerPrefab: {fileID: 7252754771041456000, guid: d2a79cf01ae7ee54ba1413d8b6828838, type: 3}
+  _servicePrefabs:
+  - {fileID: 1028995129318831716, guid: 9c91ce61d7b53e44297d233ff46414d2, type: 3}
+  - {fileID: 5457241774142031545, guid: 17c31989eb30814499b2e6d2e0cba026, type: 3}
+  - {fileID: 1868617847609748803, guid: 7a5613714e204bc41b28b5341059cf83, type: 3}
+  - {fileID: -6328336812419964364, guid: 7b207e53d044dea418b8385a357cadfc, type: 3}
+  - {fileID: 7827658887593022352, guid: da5418803eeefd2439dee85892bef5d4, type: 3}
+  - {fileID: 1530290272743141301, guid: 248e766c676e8114682e3613167b9ed7, type: 3}
+  - {fileID: 7531041897758648323, guid: 80290d2aefa6a754f80c09f237109be5, type: 3}
+  _bgmSoundID: 
+  _monsterNames:
+  - Battle_Demon
+  - Battle_Maw
+  - Battle_Mutant
+  - Battle_Nightshade
+  - Battle_Skeletonzombie
+  - Battle_Vampire
+  - Battle_Warrok
+  _waitForSeconds: 3
+  _spawnTime: 5

@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ed600a8c1320df7499c65aa21b59b9d4
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _openPanelObserver: {fileID: 11400000, guid: 33cb2b3c0f4304942841de3c357ca2b6, type: 2}
+  - _onlineNetworkManagerPrefab: {fileID: -3100187948091226742, guid: ffde917d8cf12a942aeccb3799a3327e, type: 3}
+  - _offlineNetworkManagerPrefab: {fileID: -4143565039824878593, guid: 4207f18e88df5df42971d1abd6cae722, type: 3}
+  - _singleplayBtn: {instanceID: 0}
+  - _multiplayBtn: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
