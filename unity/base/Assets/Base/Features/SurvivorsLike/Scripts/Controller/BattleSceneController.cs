@@ -101,6 +101,6 @@ public class BattleSceneController : SceneController
         var monsterName = _monsterNames.GetRandomValue();
         var battleWorldService = GetService<BattleWorldService>();
         var randomPos = battleWorldService.GetRandomPosition();
-        poolService.HandlerSpawn<EmptySyncData>(monsterName, new EmptySyncData(), randomPos, Quaternion.identity);
+        poolService.HandlerSpawn(monsterName, new EmptySyncData(), randomPos, Quaternion.identity);
     }
 }

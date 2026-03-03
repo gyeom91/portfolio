@@ -3,10 +3,10 @@ using UnityEngine;
 
 public struct ArrowSyncData : INetworkSerializable
 {
-    public ulong OwnerID;
+    public ulong NetworkID;
 
     public void NetworkSerialize<T>(BufferSerializer<T> serializer) where T : IReaderWriter
     {
-        serializer.SerializeValue(ref OwnerID);
+        serializer.SerializeValue(ref NetworkID);
     }
 }

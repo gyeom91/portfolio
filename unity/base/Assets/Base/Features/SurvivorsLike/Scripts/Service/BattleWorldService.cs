@@ -6,6 +6,7 @@ public class BattleWorldService : WorldService
 {
     public IReadOnlyCollection<Pawn> Pawns { get => _pawns; }
 
+    [SerializeField] private float _yOffset;
     private LinkedList<Pawn> _pawns = new();
 
     public void ForeachActive(Action<Pawn> callback)
@@ -28,7 +29,7 @@ public class BattleWorldService : WorldService
         var randomX = UnityEngine.Random.Range(-halfX, halfX);
         var halfZ = _worldSize.y / 2;
         var randomZ = UnityEngine.Random.Range(-halfZ, halfZ);
-        return new Vector3(randomX, 1, randomZ);
+        return new Vector3(randomX, _yOffset, randomZ);
     }
 
     public virtual void AddWorldPawn(Pawn pawn)

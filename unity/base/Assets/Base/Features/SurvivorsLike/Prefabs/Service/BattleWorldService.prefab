@@ -86,3 +86,4 @@ MonoBehaviour:
   _worldSize: {x: 64, y: 64}
   _groundPrefab: {fileID: 5688103471817334440, guid: aca48350b57c28245a747aec136037c2, type: 3}
   _wallPrefab: {fileID: 5688103471817334440, guid: aee6a8105ef4f194390afa8109b5b19a, type: 3}
+  _yOffset: 2
