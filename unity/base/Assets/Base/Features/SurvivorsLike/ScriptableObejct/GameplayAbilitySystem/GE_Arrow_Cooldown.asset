@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb068d9736917d440ba3a3103f9a665b, type: 3}
   m_Name: GE_Arrow_Cooldown
   m_EditorClassIdentifier: CycloneGames.GameplayAbilities.Runtime::CycloneGames.GameplayAbilities.Runtime.ConcreteGameplayEffectSO
-  EffectName: 
-  DurationPolicy: 0
-  Duration: 0
+  EffectName: Arrow_Cooldown
+  DurationPolicy: 1
+  Duration: 5
   Period: 0
   SerializableModifiers: []
   ExecutionDefinition: {fileID: 0}
@@ -26,7 +26,8 @@ MonoBehaviour:
   AssetTags:
     m_SerializedExplicitTags: []
   GrantedTags:
-    m_SerializedExplicitTags: []
+    m_SerializedExplicitTags:
+    - Cooldown.Skill.Arrow
   ApplicationTagRequirements:
     m_ForbiddenTags:
       m_SerializedExplicitTags: []

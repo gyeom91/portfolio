@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 780f0f7712f856b4b9256ba091f49141, type: 3}
   m_Name: GA_Arrow
   m_EditorClassIdentifier: SurvivorsLike::ArrowAbilitySO
-  AbilityName: 
+  AbilityName: Arrow
   InstancingPolicy: 0
   NetExecutionPolicy: 0
   CostEffect: {fileID: 0}
-  CooldownEffect: {fileID: 0}
+  CooldownEffect: {fileID: 11400000, guid: 4e752b441fdcaa443b48f6ce18b4f956, type: 2}
   AbilityTags:
     m_SerializedExplicitTags: []
   ActivationBlockedTags:
@@ -27,3 +27,5 @@ MonoBehaviour:
     m_SerializedExplicitTags: []
   BlockAbilitiesWithTag:
     m_SerializedExplicitTags: []
+  _arrowPrefabName: 
+  _positionOffset: {x: 0, y: 0, z: 0}
