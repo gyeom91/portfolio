@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Character : Pawn
 {
+    public string CharacterName { get { return name.Substring(name.IndexOf('_') + 1); } }
+
     protected Rigidbody _rigidbody { get; private set; }
     protected Animator _animator { get; private set; }
     protected Vector3 _moveDirection;
@@ -24,8 +26,8 @@ public class Character : Pawn
         if (_moveDirection != Vector3.zero)
         {
             var rotation = Quaternion.Slerp(
-                _rigidbody.rotation, 
-                Quaternion.LookRotation(_moveDirection), 
+                _rigidbody.rotation,
+                Quaternion.LookRotation(_moveDirection),
                 _rotSpeed * Time.fixedDeltaTime);
 
             _rigidbody.MoveRotation(rotation);

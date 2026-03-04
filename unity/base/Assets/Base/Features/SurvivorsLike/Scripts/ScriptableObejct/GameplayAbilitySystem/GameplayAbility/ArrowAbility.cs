@@ -29,8 +29,6 @@ public class ArrowAbility : GameplayAbility
             this.BlockAbilitiesWithTag
         );
 
-
-
         return ability;
     }
 
@@ -56,11 +54,11 @@ public class ArrowAbility : GameplayAbility
         arrowSyncData.NetworkID = networkObject.NetworkObjectId;
 
         var asc = character.ASC;
-        var skillCount = asc.GetAttribute(SurvivorsLikeGameplayTagContainer.Attribute_Skill_Count).CurrentValue;
+        var createCount = asc.GetAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Ability_Create_Count).CurrentValue;
         var charTransform = character.transform;
         var charForward = charTransform.forward;
-        var angleOffset = 360f / skillCount;
-        for (var i = 0; i < skillCount; ++i)
+        var angleOffset = 360f / createCount;
+        for (var i = 0; i < createCount; ++i)
         {
             var angle = angleOffset * i;
             var axis = Quaternion.AngleAxis(angle, Vector3.up);

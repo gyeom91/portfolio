@@ -16,4 +16,10 @@ public static class NetworkManagerExtension
 
         return spawnedObjects.GetValueOrDefault(id);
     }
+
+    public static bool IsServer(this NetworkObject networkObject)
+    {
+        var networkManager = networkObject.NetworkManager;
+        return networkManager.IsServer;
+    }
 }

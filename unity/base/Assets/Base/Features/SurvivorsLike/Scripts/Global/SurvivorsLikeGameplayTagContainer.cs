@@ -3,9 +3,22 @@ using UnityEngine;
 
 [assembly: RegisterGameplayTagsFrom(typeof(SurvivorsLikeGameplayTagContainer))]
 
-public class SurvivorsLikeGameplayTagContainer
+public static class SurvivorsLikeGameplayTagContainer
 {
-    public const string Attribute_Skill_Count = "Attribute.Skill.Count";
+    //  Attributes
+    public const string SurvivorsLike_Attribute_MaxHealth = "SurvivorsLike.Attribute.MaxHealth";
+    public const string SurvivorsLike_Attribute_Health = "SurvivorsLike.Attribute.Health";
+    public const string SurvivorsLike_Attribute_Speed = "SurvivorsLike.Attribute.Speed";
+    public const string SurvivorsLike_Attribute_Damage = "SurvivorsLike.Attribute.Damage";
+    public const string SurvivorsLike_Attribute_Pickup_Range = "SurvivorsLike.Attribute.Pickup.Range";
+    public const string SurvivorsLike_Attribute_Pickup_Bonus = "SurvivorsLike.Attribute.Pickup.Bonus";
+    public const string SurvivorsLike_Attribute_Ability_Create_Count = "SurvivorsLike.Attribute.Ability.Create.Count";
+    public const string SurvivorsLike_Attribute_Find_Range = "SurvivorsLike.Attribute.Find.Range";
+    public const string SurvivorsLike_Attribute_Level = "SurvivorsLike.Attribute.Level";
 
-    public const string Skill_Arrow_Cooldown = "Cooldown.Skill.Arrow";
+    //  Abilities
+    public const string SurvivorsLike_Ability_Arrow = "SurvivorsLike.Ability.Arrow";
+
+    //  Tag
+    public const string SurvivorsLike_Cooldown_Ability_Arrow = "SurvivorsLike.Cooldown.Ability.Arrow";
 }

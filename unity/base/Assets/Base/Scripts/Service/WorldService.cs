@@ -35,13 +35,12 @@ public class WorldService : Service
         }
     }
 
-    public List<Cell> GetPositionToCellRange(Vector3 position, ERange eRange, float range)
+    public void GetPositionToCellRange(Vector3 position, ERange eRange, float range, List<Cell> output)
     {
-        List<Cell> result = new List<Cell>();
-        Vector3Int centerKey = _grid.WorldToCell(position);
-        int cellRange = Mathf.CeilToInt(range);
+        var centerKey = _grid.WorldToCell(position);
+        var cellRange = Mathf.CeilToInt(range);
+        var sqrRange = range * range;
 
-        float sqrRange = range * range;
         for (int x = -cellRange; x <= cellRange; x++)
         {
             for (int y = -cellRange; y <= cellRange; y++)
@@ -57,12 +56,10 @@ public class WorldService : Service
 
                 if (_cells.TryGetValue(targetKey, out Cell cell))
                 {
-                    result.Add(cell);
+                    output.Add(cell);
                 }
             }
         }
-
-        return result;
     }
 
     public Cell GetPositionToCell(Vector3 position)

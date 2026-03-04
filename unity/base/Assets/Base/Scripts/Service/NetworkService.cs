@@ -6,9 +6,9 @@ using UnityEngine;
 
 public class NetworkService : Service
 {
-    private Dictionary<Constants.EHeader, Action<FastBufferReader>> _callbacks = new();
+    private Dictionary<Constants.EHeader, Action<Constants.EHeader, FastBufferReader>> _callbacks = new();
 
-    public void RegisterEvents(Constants.EHeader header, Action<FastBufferReader> callback)
+    public void RegisterEvents(Constants.EHeader header, Action<Constants.EHeader, FastBufferReader> callback)
     {
         if (_callbacks.TryGetValue(header, out var action) == false)
             _callbacks.Add(header, null);
@@ -17,7 +17,7 @@ public class NetworkService : Service
         _callbacks[header] += callback;
     }
 
-    public void UnregisterEvents(Constants.EHeader header, Action<FastBufferReader> callback)
+    public void UnregisterEvents(Constants.EHeader header, Action<Constants.EHeader, FastBufferReader> callback)
     {
         if (_callbacks.ContainsKey(header))
         {
@@ -96,6 +96,6 @@ public class NetworkService : Service
         if (_callbacks.TryGetValue(message.EHeader, out var action) == false)
             return;
 
-        action?.Invoke(reader);
+        action?.Invoke(message.EHeader, reader);
     }
 }

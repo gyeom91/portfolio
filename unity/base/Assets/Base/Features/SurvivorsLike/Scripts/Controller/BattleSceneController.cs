@@ -64,7 +64,7 @@ public class BattleSceneController : SceneController
         base.OnDestroy();
     }
 
-    protected virtual async void OnLoadEventCompleted(FastBufferReader reader)
+    protected virtual async void OnLoadEventCompleted(Constants.EHeader eHeader, FastBufferReader reader)
     {
         Freeze = true;
 

@@ -247,5 +247,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: SurvivorsLike::Hero
   _rotSpeed: 10
+  _initialAttributesEffect: {fileID: 11400000, guid: 05af91f91f36739498f1ffa98b1558af, type: 2}
+  _initialAbilities:
+  - {fileID: 11400000, guid: ac0deadc8226e41409cffd617572f504, type: 2}
+  _initialHeroAttributeGE: {fileID: 11400000, guid: e019bcfc04fa80649a87e08de342ed36, type: 2}
+  _activateAbilityTags:
+  - SurvivorsLike.Ability.Arrow
   _noiseAmplitude: 25
   _noiseDuration: 0.25

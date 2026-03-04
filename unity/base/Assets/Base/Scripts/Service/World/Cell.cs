@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class Cell
 {
+    public IReadOnlyCollection<IWorldActor> Actors => _actors;
+
     private HashSet<IWorldActor> _actors = new();
 
     public void Add(IWorldActor worldActor)
