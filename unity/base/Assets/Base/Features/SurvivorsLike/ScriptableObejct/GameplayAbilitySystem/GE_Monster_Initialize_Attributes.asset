@@ -10,13 +10,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb068d9736917d440ba3a3103f9a665b, type: 3}
-  m_Name: GE_Arrow_Cooldown
+  m_Name: GE_Monster_Initialize_Attributes
   m_EditorClassIdentifier: CycloneGames.GameplayAbilities.Runtime::CycloneGames.GameplayAbilities.Runtime.ConcreteGameplayEffectSO
-  EffectName: Arrow_Cooldown
-  DurationPolicy: 1
+  EffectName: Monster_Initialize_Attributes
+  DurationPolicy: 0
   Duration: 5
   Period: 0
-  SerializableModifiers: []
+  SerializableModifiers:
+  - AttributeName: SurvivorsLike.Attribute.MaxHealth
+    Operation: 3
+    Magnitude:
+      BaseValue: 200
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Health
+    Operation: 3
+    Magnitude:
+      BaseValue: 200
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Damage
+    Operation: 3
+    Magnitude:
+      BaseValue: 50
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Speed
+    Operation: 3
+    Magnitude:
+      BaseValue: 1.5
+      ScalingFactorPerLevel: 0
   ExecutionDefinition: {fileID: 0}
   Stacking:
     Type: 0
@@ -26,8 +46,7 @@ MonoBehaviour:
   AssetTags:
     m_SerializedExplicitTags: []
   GrantedTags:
-    m_SerializedExplicitTags:
-    - Cooldown.Skill.Arrow
+    m_SerializedExplicitTags: []
   ApplicationTagRequirements:
     m_ForbiddenTags:
       m_SerializedExplicitTags: []

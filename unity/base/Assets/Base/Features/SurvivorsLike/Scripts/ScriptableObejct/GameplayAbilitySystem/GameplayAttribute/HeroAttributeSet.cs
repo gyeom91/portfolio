@@ -3,10 +3,11 @@ using UnityEngine;
 
 public class HeroAttributeSet : AttributeSet
 {
+    public GameplayAttribute Level { get; } = new GameplayAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Level);
     public GameplayAttribute PickupRange { get; } = new GameplayAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Pickup_Range);
     public GameplayAttribute PickupBonus { get; } = new GameplayAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Pickup_Bonus);
-    public GameplayAttribute CreateCount { get; } = new GameplayAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Ability_Create_Count);
-    public GameplayAttribute Level { get; } = new GameplayAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Level);
+    public GameplayAttribute AbilityCount { get; } = new GameplayAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Ability_Count);
+    public GameplayAttribute AbilitySpeed { get; } = new GameplayAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Ability_Speed);
 
     public HeroAttributeSet(string characterName)
     {

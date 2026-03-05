@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb068d9736917d440ba3a3103f9a665b, type: 3}
-  m_Name: GE_Character_Initialize_Attributes
+  m_Name: GE_Knight_Initialize_Attributes
   m_EditorClassIdentifier: CycloneGames.GameplayAbilities.Runtime::CycloneGames.GameplayAbilities.Runtime.ConcreteGameplayEffectSO
-  EffectName: Hero_Initialize_Attributes
+  EffectName: Knight_Initialize_Attributes
   DurationPolicy: 0
   Duration: 5
   Period: 0
@@ -27,15 +27,35 @@ MonoBehaviour:
     Magnitude:
       BaseValue: 200
       ScalingFactorPerLevel: 0
-  - AttributeName: SurvivorsLike.Attribute.Speed
-    Operation: 3
-    Magnitude:
-      BaseValue: 200
-      ScalingFactorPerLevel: 0
   - AttributeName: SurvivorsLike.Attribute.Damage
     Operation: 3
     Magnitude:
-      BaseValue: 200
+      BaseValue: 50
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Speed
+    Operation: 3
+    Magnitude:
+      BaseValue: 5
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Pickup.Range
+    Operation: 3
+    Magnitude:
+      BaseValue: 5
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Pickup.Bonus
+    Operation: 3
+    Magnitude:
+      BaseValue: 1
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Ability.Count
+    Operation: 3
+    Magnitude:
+      BaseValue: 1
+      ScalingFactorPerLevel: 0
+  - AttributeName: SurvivorsLike.Attribute.Ability.Speed
+    Operation: 3
+    Magnitude:
+      BaseValue: 5
       ScalingFactorPerLevel: 0
   ExecutionDefinition: {fileID: 0}
   Stacking:

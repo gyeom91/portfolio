@@ -77,6 +77,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7480850520237783762, guid: 7e475031155e8984ebe1f3a12e8d871a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3883724088179791042}
+    - targetCorrespondingSourceObject: {fileID: 7480850520237783762, guid: 7e475031155e8984ebe1f3a12e8d871a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6511925464316627819}
   m_SourcePrefab: {fileID: 100100000, guid: 7e475031155e8984ebe1f3a12e8d871a, type: 3}
 --- !u!1 &1702472357441987801 stripped
 GameObject:
@@ -247,8 +250,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: SurvivorsLike::Hero
   _rotSpeed: 10
-  _initialAttributesEffect: {fileID: 11400000, guid: 05af91f91f36739498f1ffa98b1558af, type: 2}
-  _initialAbilities: []
-  _initialHeroAttributeGE: {fileID: 11400000, guid: e019bcfc04fa80649a87e08de342ed36, type: 2}
+  _abilityTags: []
   _noiseAmplitude: 25
   _noiseDuration: 0.25
+--- !u!114 &6511925464316627819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1702472357441987801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f471a334ead9bb44b4957ce9d923b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: SurvivorsLike::NetworkAbilitySystemAdapter
+  ShowTopMostFoldoutHeaderGroup: 1
+  _initializeAttributes:
+  - SurvivorsLike.Attribute.MaxHealth
+  - SurvivorsLike.Attribute.Health
+  - SurvivorsLike.Attribute.Damage
+  - SurvivorsLike.Attribute.Speed
+  - SurvivorsLike.Attribute.Level
+  - SurvivorsLike.Attribute.Pickup.Range
+  - SurvivorsLike.Attribute.Pickup.Bonus
+  - SurvivorsLike.Attribute.Ability.Count
+  - SurvivorsLike.Attribute.Ability.Speed
+  _initializeEffects:
+  - {fileID: 11400000, guid: 150b0af9c14aca54f90a990b1b271985, type: 2}
+  _initializeAbilities: []

@@ -53,29 +53,22 @@ public class ArrowAbility : GameplayAbility
         var arrowSyncData = new ArrowSyncData();
         arrowSyncData.NetworkID = networkObject.NetworkObjectId;
 
-        var asc = character.ASC;
-        var createCount = asc.GetAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Ability_Create_Count).CurrentValue;
+        var adapter = character.Adapter;
+        var asc = adapter.ASC;
+        var abilityCount = asc.GetAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Ability_Count).CurrentValue;
         var charTransform = character.transform;
         var charForward = charTransform.forward;
-        var angleOffset = 360f / createCount;
-        for (var i = 0; i < createCount; ++i)
+        var angleOffset = 360f / abilityCount;
+        for (var i = 0; i < abilityCount; ++i)
         {
             var angle = angleOffset * i;
             var axis = Quaternion.AngleAxis(angle, Vector3.up);
             var direction = axis * charForward;
             var rotation = Quaternion.LookRotation(direction, Vector3.up);
             var spawnPos = charTransform.position + _positionOffset;
-            var arrowNetworkObject = networkPoolService.HandlerSpawn("Arrow", arrowSyncData, spawnPos, rotation);
-            if (arrowNetworkObject.TryGetComponent<Arrow>(out var arrow))
-            {
-                arrow.OnHit += EndAbility;
-            }
-            else
-            {
-                networkObject.Despawn();
-
-                EndAbility();
-            }
+            networkPoolService.HandlerSpawn("Arrow", arrowSyncData, spawnPos, rotation);
         }
+
+        EndAbility();
     }
 }

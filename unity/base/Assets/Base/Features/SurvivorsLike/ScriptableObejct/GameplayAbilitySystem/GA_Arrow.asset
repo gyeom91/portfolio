@@ -18,7 +18,8 @@ MonoBehaviour:
   CostEffect: {fileID: 0}
   CooldownEffect: {fileID: 11400000, guid: 4e752b441fdcaa443b48f6ce18b4f956, type: 2}
   AbilityTags:
-    m_SerializedExplicitTags: []
+    m_SerializedExplicitTags:
+    - SurvivorsLike.Ability.Arrow
   ActivationBlockedTags:
     m_SerializedExplicitTags: []
   ActivationRequiredTags:

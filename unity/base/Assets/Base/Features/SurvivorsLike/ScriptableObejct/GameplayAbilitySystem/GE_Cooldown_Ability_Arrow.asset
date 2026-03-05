@@ -10,33 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb068d9736917d440ba3a3103f9a665b, type: 3}
-  m_Name: GE_Hero_Initialize_Attributes
+  m_Name: GE_Cooldown_Ability_Arrow
   m_EditorClassIdentifier: CycloneGames.GameplayAbilities.Runtime::CycloneGames.GameplayAbilities.Runtime.ConcreteGameplayEffectSO
-  EffectName: Hero_Initialize_Attributes
-  DurationPolicy: 0
+  EffectName: Cooldown_Ability_Arrow
+  DurationPolicy: 1
   Duration: 5
   Period: 0
-  SerializableModifiers:
-  - AttributeName: SurvivorsLike.Attribute.MaxHealth
-    Operation: 3
-    Magnitude:
-      BaseValue: 200
-      ScalingFactorPerLevel: 0
-  - AttributeName: SurvivorsLike.Attribute.Health
-    Operation: 3
-    Magnitude:
-      BaseValue: 200
-      ScalingFactorPerLevel: 0
-  - AttributeName: SurvivorsLike.Attribute.Speed
-    Operation: 3
-    Magnitude:
-      BaseValue: 200
-      ScalingFactorPerLevel: 0
-  - AttributeName: SurvivorsLike.Attribute.Damage
-    Operation: 3
-    Magnitude:
-      BaseValue: 200
-      ScalingFactorPerLevel: 0
+  SerializableModifiers: []
   ExecutionDefinition: {fileID: 0}
   Stacking:
     Type: 0
@@ -46,7 +26,8 @@ MonoBehaviour:
   AssetTags:
     m_SerializedExplicitTags: []
   GrantedTags:
-    m_SerializedExplicitTags: []
+    m_SerializedExplicitTags:
+    - SurvivorsLike.Cooldown.Ability.Arrow
   ApplicationTagRequirements:
     m_ForbiddenTags:
       m_SerializedExplicitTags: []

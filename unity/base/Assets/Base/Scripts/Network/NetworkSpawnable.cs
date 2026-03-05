@@ -20,20 +20,6 @@ public class NetworkSpawnable : BaseNetworkBehaviour
         }
     }
 
-    public override void OnNetworkPreDespawn()
-    {
-        base.OnNetworkPreDespawn();
-
-        if (_networkReleases.IsNullOrEmpty())
-            return;
-
-        var length = _networkReleases.Length;
-        for (var i = 0; i < length; ++i)
-        {
-            _networkReleases[i].OnPrevRelease();
-        }
-    }
-
     public override void OnNetworkDespawn()
     {
         base.OnNetworkDespawn();
@@ -45,34 +31,6 @@ public class NetworkSpawnable : BaseNetworkBehaviour
         for (var i = 0; i < length; ++i)
         {
             _networkReleases[i].OnRelease();
-        }
-    }
-
-    protected override void OnNetworkPreSpawn(ref NetworkManager networkManager)
-    {
-        base.OnNetworkPreSpawn(ref networkManager);
-
-        if (_networkInitializes.IsNullOrEmpty())
-            return;
-
-        var length = _networkInitializes.Length;
-        for (var i = 0; i < length; ++i)
-        {
-            _networkInitializes[i].OnPrevInitialize(networkManager);
-        }
-    }
-
-    protected override void OnNetworkPostSpawn()
-    {
-        base.OnNetworkPostSpawn();
-
-        if (_networkInitializes.IsNullOrEmpty())
-            return;
-
-        var length = _networkInitializes.Length;
-        for (var i = 0; i < length; ++i)
-        {
-            _networkInitializes[i].OnPostInitialize();
         }
     }
 

@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class UIBattlePanel : UIPanel
 {
     [SerializeField] private Button _optionBtn;
-    [SerializeField] private Slider _maxHealthSlider;
-    [SerializeField] private TextMeshProUGUI _maxHealthTmp;
     [SerializeField] private Slider _healthSlider;
     [SerializeField] private TextMeshProUGUI _healthTmp;
     [SerializeField] private Slider _expSlider;
@@ -48,8 +46,7 @@ public class UIBattlePanel : UIPanel
 
     public void SetMaxHealth(float maxHealth)
     {
-        _maxHealthTmp.text = string.Format("{0:F0}%", maxHealth);
-        _maxHealthSlider.value = maxHealth;
+        _healthSlider.maxValue = maxHealth;
     }
 
     public void SetHealth(float health)

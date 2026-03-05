@@ -1,49 +1,81 @@
-using System.Collections.Generic;
+using Unity.Netcode;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Monster : BattleCharacter
 {
     protected Transform _target { get; private set; }
 
-    private List<Cell> _cells = new();
+    private Slider _healthSlider = null;
+
+    public override void OnInitialize(NetworkObject networkObject)
+    {
+        base.OnInitialize(networkObject);
+
+        Adapter.OnChangedNetworkAttributeList += OnChangedNetworkAttributeList;
+    }
+
+    public override void OnRelease()
+    {
+        base.OnRelease();
+
+        Adapter.OnChangedNetworkAttributeList -= OnChangedNetworkAttributeList;
+    }
 
     protected override void OnBehaviour()
     {
         base.OnBehaviour();
 
         _target = null;
-        _cells.Clear();
-
-        var attribute = ASC.GetAttribute(SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Find_Range);
-        var findRange = attribute.CurrentValue;
-        var minSqrDistance = findRange * findRange;
-        Transform closestHero = null;
 
         var sceneController = SceneController.Instance;
         var battleWorldService = sceneController.GetService<BattleWorldService>();
-        battleWorldService.GetPositionToCellRange(Position, WorldService.ERange.Circle, findRange, _cells);
-
-        foreach (var cell in _cells)
+        var minSqrDistance = float.MaxValue;
+        battleWorldService.ForeachActive(pawn =>
         {
-            foreach (var actor in cell.Actors)
+            if (pawn is Hero hero == false)
+                return;
+
+            float sqrDistance = (transform.position - hero.transform.position).sqrMagnitude;
+            if (sqrDistance < minSqrDistance)
             {
-                if (actor is Hero hero)
-                {
-                    float sqrDistance = (transform.position - hero.transform.position).sqrMagnitude;
-
-                    if (sqrDistance < minSqrDistance)
-                    {
-                        minSqrDistance = sqrDistance;
-                        closestHero = hero.transform;
-                    }
-                }
+                minSqrDistance = sqrDistance;
+                _target = hero.transform;
             }
-        }
-
-        _target = closestHero;
+        });
         if (_target.IsNull())
             return;
 
         _moveDirection = (_target.position - transform.position).normalized;
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        _healthSlider = GetComponentInChildren<Slider>();
+    }
+
+    private void OnChangedNetworkAttributeList(NetworkListEvent<NetworkAttributeData> networkListEvent, NetworkList<NetworkAttributeData> networkAttributeDatas)
+    {
+        if (_healthSlider.IsNull())
+            return;
+
+        var networkAttributeData = networkListEvent.Value;
+        var attributeName = networkAttributeData.AttributeName;
+        switch (attributeName.ToString())
+        {
+            case SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_MaxHealth:
+                {
+                    _healthSlider.maxValue = networkAttributeData.CurrentValue;
+                }
+                break;
+
+            case SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Health:
+                {
+                    _healthSlider.value = networkAttributeData.CurrentValue;
+                }
+                break;
+        }
     }
 }

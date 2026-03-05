@@ -1,18 +1,25 @@
+using System.Collections.Generic;
+using CycloneGames.GameplayAbilities.Runtime;
 using Unity.Netcode;
 using UnityEngine;
 
 public class Hero : BattleCharacter
 {
+    [SerializeField, AttributeNameSelector] private List<string> _abilityTags;
     [SerializeField] private float _noiseAmplitude;
     [SerializeField] private float _noiseDuration;
-    private NetworkAttributeAdapter _networkAttributeAdapter = null;
 
     public override void OnInitialize(NetworkObject networkObject)
     {
         base.OnInitialize(networkObject);
 
+        var asc = Adapter.ASC;
+        asc.AddAttributeSet(new HeroAttributeSet(CharacterName));
+
         if (networkObject.IsOwner == false)
             return;
+
+        Adapter.OnChangedNetworkAttributeList += OnChangedNetworkAttributeList;
 
         var sceneController = SceneController.Instance;
         var cinemachineService = sceneController.GetService<CinemachineService>();
@@ -21,6 +28,16 @@ public class Hero : BattleCharacter
         noiseCinemachineHandler.SetLookAtTarget(transform);
 
         cinemachineService.ChangeHandler(noiseCinemachineHandler);
+    }
+
+    public override void OnRelease()
+    {
+        base.OnRelease();
+
+        if (_networkObject.IsOwner == false)
+            return;
+
+        Adapter.OnChangedNetworkAttributeList -= OnChangedNetworkAttributeList;
     }
 
     protected override void OnBehaviour()
@@ -41,22 +58,21 @@ public class Hero : BattleCharacter
         base.OnFixedBehaviour();
     }
 
-    protected override void Awake()
-    {
-        base.Awake();
-
-        _networkAttributeAdapter = GetComponent<NetworkAttributeAdapter>();
-        _networkAttributeAdapter.OnChangedNetworkAttributeList += OnChangedNetworkAttributeList;
-
-        ASC.AddAttributeSet(new HeroAttributeSet(CharacterName));
-    }
-
     private void Update()
     {
         if (SceneController.Instance is BattleSceneController sceneController == false || sceneController.Freeze)
             return;
 
         OnBehaviour();
+
+        if (_abilityTags.IsNullOrEmpty())
+            return;
+
+        var length = _abilityTags.Count;
+        for (var i = 0; i < length; ++i)
+        {
+            Adapter.TryActivateAbilityWithTag(_abilityTags[i]);
+        }
     }
 
     private void FixedUpdate()
@@ -67,16 +83,8 @@ public class Hero : BattleCharacter
         OnFixedBehaviour();
     }
 
-    private void OnDestroy()
-    {
-        _networkAttributeAdapter.OnChangedNetworkAttributeList -= OnChangedNetworkAttributeList;
-    }
-
     private void OnChangedNetworkAttributeList(NetworkListEvent<NetworkAttributeData> networkListEvent, NetworkList<NetworkAttributeData> networkAttributeDatas)
     {
-        if (_networkObject.IsOwner == false)
-            return;
-
         var sceneController = SceneController.Instance;
         var uIService = sceneController.GetService<UIService>();
         var uIBattlePanel = uIService.Get<UIBattlePanel>();

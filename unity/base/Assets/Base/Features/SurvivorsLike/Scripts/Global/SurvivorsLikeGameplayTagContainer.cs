@@ -12,7 +12,8 @@ public static class SurvivorsLikeGameplayTagContainer
     public const string SurvivorsLike_Attribute_Damage = "SurvivorsLike.Attribute.Damage";
     public const string SurvivorsLike_Attribute_Pickup_Range = "SurvivorsLike.Attribute.Pickup.Range";
     public const string SurvivorsLike_Attribute_Pickup_Bonus = "SurvivorsLike.Attribute.Pickup.Bonus";
-    public const string SurvivorsLike_Attribute_Ability_Create_Count = "SurvivorsLike.Attribute.Ability.Create.Count";
+    public const string SurvivorsLike_Attribute_Ability_Count = "SurvivorsLike.Attribute.Ability.Count";
+    public const string SurvivorsLike_Attribute_Ability_Speed = "SurvivorsLike.Attribute.Ability.Speed";
     public const string SurvivorsLike_Attribute_Find_Range = "SurvivorsLike.Attribute.Find.Range";
     public const string SurvivorsLike_Attribute_Level = "SurvivorsLike.Attribute.Level";
 

@@ -2481,6 +2481,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _useSafeArea: 1
   _optionBtn: {fileID: 2959013462817507977}
+  _maxHealthSlider: {fileID: 0}
+  _maxHealthTmp: {fileID: 0}
   _healthSlider: {fileID: 6570103659378273241}
   _healthTmp: {fileID: 1473370634957359225}
   _expSlider: {fileID: 4227690697526538957}
@@ -2714,7 +2716,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 1
-  m_WholeNumbers: 1
+  m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
