@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: CycloneGames.GameplayAbilities.Runtime::CycloneGames.GameplayAbilities.Runtime.ConcreteGameplayEffectSO
   EffectName: Cooldown_Ability_Arrow
   DurationPolicy: 1
-  Duration: 5
+  Duration: 2.5
   Period: 0
   SerializableModifiers: []
   ExecutionDefinition: {fileID: 0}

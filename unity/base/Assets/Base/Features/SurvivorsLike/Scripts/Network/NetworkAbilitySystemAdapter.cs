@@ -9,7 +9,6 @@ public class NetworkAbilitySystemAdapter : BaseNetworkBehaviour
 {
     public event Action<NetworkListEvent<NetworkAttributeData>, NetworkList<NetworkAttributeData>> OnChangedNetworkAttributeList;
     public AbilitySystemComponent ASC { get; private set; }
-    public float MoveSpeed { get; private set; }
 
     protected Dictionary<string, Action<float, float>> _changeCallbackContainer { get; private set; } = new();
 
@@ -90,13 +89,6 @@ public class NetworkAbilitySystemAdapter : BaseNetworkBehaviour
         InitializeAttributes();
     }
 
-    protected override void OnNetworkPostSpawn()
-    {
-        base.OnNetworkPostSpawn();
-
-        InitializeEffects();
-    }
-
     public override void OnNetworkDespawn()
     {
         base.OnNetworkDespawn();
@@ -120,17 +112,9 @@ public class NetworkAbilitySystemAdapter : BaseNetworkBehaviour
         _networkAttributeDatas.Initialize(this);
     }
 
-    private void OnChangedAttributeCurrentValue(string attributeName, float prev, float next)
+    private void Start()
     {
-        if (IsServer == false)
-            return;
-
-        SetAttributeValue(attributeName, ASC.GetAttribute(attributeName));
-
-        if (attributeName != SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Speed)
-            return;
-
-        MoveSpeed = next;
+        InitializeEffects();
     }
 
     private void InitializeAttributes()
@@ -143,7 +127,7 @@ public class NetworkAbilitySystemAdapter : BaseNetworkBehaviour
         {
             var attributeName = _initializeAttributes[i];
             if (_changeCallbackContainer.ContainsKey(attributeName) == false)
-                _changeCallbackContainer[attributeName] = (prev, next) => { OnChangedAttributeCurrentValue(attributeName, prev, next); };
+                _changeCallbackContainer[attributeName] = (prev, next) => { SetAttributeValue(attributeName, ASC.GetAttribute(attributeName)); };
 
             var attribute = ASC.GetAttribute(attributeName);
             attribute.OnCurrentValueChanged += _changeCallbackContainer[attributeName];

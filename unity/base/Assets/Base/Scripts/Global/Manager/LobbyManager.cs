@@ -18,6 +18,10 @@ public class LobbyManager : Singleton<LobbyManager>
     {
         Lobby = null;
         _lobbyEvents = null;
+
+        if (_lobbyEventCallbacks.IsNull())
+            return;
+
         _lobbyEventCallbacks.KickedFromLobby -= OnKickedFromLobby;
         _lobbyEventCallbacks.LobbyChanged -= OnChangedLobby;
         _lobbyEventCallbacks = null;

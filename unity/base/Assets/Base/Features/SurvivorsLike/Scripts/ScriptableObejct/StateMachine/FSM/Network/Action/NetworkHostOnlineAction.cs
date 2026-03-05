@@ -43,14 +43,18 @@ public class NetworkHostOnlineAction : NetworkHostAction
         {
             var lobby = LobbyManager.Instance.Lobby;
             var allocation = await RelayService.Instance.CreateAllocationAsync(lobby.MaxPlayers);
-#if UNITY_WEBGL
-            var connectionType = "wss";
-#else
-            var connectionType = "dtls";
-#endif
             var networkManager = NetworkManager.Singleton;
             var networkConfig = networkManager.NetworkConfig;
             var utp = (UnityTransport)networkConfig.NetworkTransport;
+
+#if UNITY_WEBGL
+            var connectionType = "wss";
+            utp.UseWebSockets = true;
+#else
+            var connectionType = "dtls";
+            utp.UseWebSockets = false;
+#endif
+
             var relayServerData = allocation.ToRelayServerData(connectionType);
             utp.SetRelayServerData(relayServerData);
 

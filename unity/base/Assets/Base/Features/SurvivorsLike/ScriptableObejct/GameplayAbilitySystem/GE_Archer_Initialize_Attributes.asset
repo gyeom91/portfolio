@@ -35,7 +35,7 @@ MonoBehaviour:
   - AttributeName: SurvivorsLike.Attribute.Speed
     Operation: 3
     Magnitude:
-      BaseValue: 5
+      BaseValue: 2
       ScalingFactorPerLevel: 0
   - AttributeName: SurvivorsLike.Attribute.Pickup.Range
     Operation: 3
@@ -55,7 +55,7 @@ MonoBehaviour:
   - AttributeName: SurvivorsLike.Attribute.Ability.Speed
     Operation: 3
     Magnitude:
-      BaseValue: 2
+      BaseValue: 5
       ScalingFactorPerLevel: 0
   ExecutionDefinition: {fileID: 0}
   Stacking:

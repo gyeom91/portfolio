@@ -23,12 +23,13 @@ public class BattleWorldService : WorldService
         }
     }
 
-    public Vector3 GetRandomPosition()
+    public Vector3 GetRandomPosition(float padding = 5)
     {
-        var halfX = _worldSize.x / 2;
+        var halfX = (_worldSize.x / 2) - padding;
+        var halfZ = (_worldSize.y / 2) - padding;
         var randomX = UnityEngine.Random.Range(-halfX, halfX);
-        var halfZ = _worldSize.y / 2;
         var randomZ = UnityEngine.Random.Range(-halfZ, halfZ);
+
         return new Vector3(randomX, _yOffset, randomZ);
     }
 

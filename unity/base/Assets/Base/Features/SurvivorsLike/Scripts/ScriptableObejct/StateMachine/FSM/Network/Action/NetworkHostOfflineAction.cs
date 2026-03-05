@@ -33,6 +33,12 @@ public class NetworkHostOfflineAction : NetworkHostAction
         var utp = (UnityTransport)networkConfig.NetworkTransport;
         utp.SetConnectionData(_localhost, _port);
 
+#if UNITY_WEBGL
+        utp.UseWebSockets = true;
+#else
+        utp.UseWebSockets = false;
+#endif
+
         try
         {
             await base.Enter();

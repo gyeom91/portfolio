@@ -63,7 +63,9 @@ public abstract class NetworkHostAction : NetworkFSMAction
         var networkConfig = networkManager.NetworkConfig;
         networkConfig.ConnectionData = payloadBytes;
         if (networkManager.StartHost() == false)
+        {
             throw new Exception();
+        }
     }
 
     protected virtual async void OnLoadEventCompleted(string sceneName, UnityEngine.SceneManagement.LoadSceneMode loadSceneMode, List<ulong> clientsCompleted, List<ulong> clientsTimedOut)

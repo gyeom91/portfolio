@@ -27,11 +27,6 @@ public class Arrow : Pawn, IInstanceData, INetworkInitialize, INetworkRelease
         _speed = speedAttribute.CurrentValue;
     }
 
-    public void OnPrevInitialize(NetworkManager networkManager)
-    {
-
-    }
-
     public void OnInitialize(NetworkObject networkObject)
     {
         _networkObject = networkObject;
@@ -39,16 +34,6 @@ public class Arrow : Pawn, IInstanceData, INetworkInitialize, INetworkRelease
         var sceneController = SceneController.Instance;
         var battleWorldService = sceneController.GetService<BattleWorldService>();
         battleWorldService.AddWorldPawn(this);
-    }
-
-    public void OnPostInitialize()
-    {
-
-    }
-
-    public void OnPrevRelease()
-    {
-
     }
 
     public virtual void OnRelease()
@@ -70,23 +55,27 @@ public class Arrow : Pawn, IInstanceData, INetworkInitialize, INetworkRelease
         if (_networkObject.IsSpawned == false || _networkObject.IsServer() == false)
             return;
 
-        if (other.TryGetComponent<BattleCharacter>(out var character))
-        {
-            if (character is Monster monster)
-            {
-                var adapter = monster.Adapter;
-                adapter.ApplyGameplayEffect(_hitEffect);
-
-                _networkObject.Despawn();
-            }
-            else if (character is Hero hero)
-            {
-
-            }
-
+        if (other.TryGetComponent<IWorldActor>(out var actor) == false)
             return;
-        }
 
-        _networkObject.Despawn();
+        if (actor is Environment environment)
+        {
+            _networkObject.Despawn();
+        }
+        else if (actor is Monster monster)
+        {
+            var adapter = monster.Adapter;
+            adapter.ApplyGameplayEffect(_hitEffect);
+
+            _networkObject.Despawn();
+        }
+        else if (actor is Hero hero)
+        {
+
+        }
+        else
+        {
+            // other is arrow
+        }
     }
 }

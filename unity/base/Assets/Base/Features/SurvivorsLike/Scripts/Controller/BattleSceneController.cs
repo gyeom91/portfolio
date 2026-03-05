@@ -10,6 +10,7 @@ public class BattleSceneController : SceneController
     [SerializeField] private string[] _monsterNames;
     [SerializeField] private float _waitForSeconds;
     [SerializeField] private float _spawnTime;
+    [SerializeField] private int _maxSpawnMonster;
     private float _spawnTimer = 0;
     //private LevelingData _levelingData;
 
@@ -96,10 +97,21 @@ public class BattleSceneController : SceneController
 
         _spawnTimer = 0;
 
+        var spawnMosnter = 0;
+        var battleWorldService = GetService<BattleWorldService>();
+        battleWorldService.ForeachActive(pawn =>
+        {
+            if (pawn is Monster monster == false)
+                return;
+
+            ++spawnMosnter;
+        });
+        if (spawnMosnter >= _maxSpawnMonster)
+            return;
+
         var spawnManager = networkManager.SpawnManager;
         var poolService = GetService<NetworkPoolService>();
         var monsterName = _monsterNames.GetRandomValue();
-        var battleWorldService = GetService<BattleWorldService>();
         var randomPos = battleWorldService.GetRandomPosition();
         poolService.HandlerSpawn(monsterName, new EmptySyncData(), randomPos, Quaternion.identity);
     }

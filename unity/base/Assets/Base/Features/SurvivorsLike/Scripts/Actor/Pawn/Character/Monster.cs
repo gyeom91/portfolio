@@ -1,26 +1,16 @@
+using CycloneGames.GameplayAbilities.Runtime;
 using Unity.Netcode;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Monster : BattleCharacter
 {
+    protected override float _posSpeed => _isCollisionEnter ? 0 : base._posSpeed;
     protected Transform _target { get; private set; }
 
+    [SerializeField] private GameplayEffectSO _hitEffect;
     private Slider _healthSlider = null;
-
-    public override void OnInitialize(NetworkObject networkObject)
-    {
-        base.OnInitialize(networkObject);
-
-        Adapter.OnChangedNetworkAttributeList += OnChangedNetworkAttributeList;
-    }
-
-    public override void OnRelease()
-    {
-        base.OnRelease();
-
-        Adapter.OnChangedNetworkAttributeList -= OnChangedNetworkAttributeList;
-    }
+    private bool _isCollisionEnter = false;
 
     protected override void OnBehaviour()
     {
@@ -49,15 +39,18 @@ public class Monster : BattleCharacter
         _moveDirection = (_target.position - transform.position).normalized;
     }
 
-    protected override void Awake()
+    protected override void OnFixedBehaviour()
     {
-        base.Awake();
+        if (_networkObject.IsServer() == false)
+            return;
 
-        _healthSlider = GetComponentInChildren<Slider>();
+        base.OnFixedBehaviour();
     }
 
-    private void OnChangedNetworkAttributeList(NetworkListEvent<NetworkAttributeData> networkListEvent, NetworkList<NetworkAttributeData> networkAttributeDatas)
+    protected override void OnChangedNetworkAttributeList(NetworkListEvent<NetworkAttributeData> networkListEvent, NetworkList<NetworkAttributeData> networkAttributeDatas)
     {
+        base.OnChangedNetworkAttributeList(networkListEvent, networkAttributeDatas);
+
         if (_healthSlider.IsNull())
             return;
 
@@ -77,5 +70,53 @@ public class Monster : BattleCharacter
                 }
                 break;
         }
+    }
+
+    protected override void Awake()
+    {
+        base.Awake();
+
+        _healthSlider = GetComponentInChildren<Slider>();
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (_networkObject.IsServer() == false)
+            return;
+
+        if (collision.transform != _target)
+            return;
+
+        _isCollisionEnter = true;
+
+        if (_target.TryGetComponent<NetworkAbilitySystemAdapter>(out var networkAbilitySystemAdapter) == false)
+            return;
+
+        //networkAbilitySystemAdapter.ApplyGameplayEffect(_hitEffect);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        if (_networkObject.IsServer() == false)
+            return;
+
+        if (collision.transform != _target)
+            return;
+
+        if (_target.TryGetComponent<NetworkAbilitySystemAdapter>(out var networkAbilitySystemAdapter) == false)
+            return;
+
+        //networkAbilitySystemAdapter.ApplyGameplayEffect(_hitEffect);
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (_networkObject.IsServer() == false)
+            return;
+
+        if (collision.transform != _target)
+            return;
+
+        _isCollisionEnter = false;
     }
 }

@@ -19,8 +19,6 @@ public class Hero : BattleCharacter
         if (networkObject.IsOwner == false)
             return;
 
-        Adapter.OnChangedNetworkAttributeList += OnChangedNetworkAttributeList;
-
         var sceneController = SceneController.Instance;
         var cinemachineService = sceneController.GetService<CinemachineService>();
         var noiseCinemachineHandler = cinemachineService.GetHandler<NoiseCinemachineHandler>();
@@ -28,16 +26,6 @@ public class Hero : BattleCharacter
         noiseCinemachineHandler.SetLookAtTarget(transform);
 
         cinemachineService.ChangeHandler(noiseCinemachineHandler);
-    }
-
-    public override void OnRelease()
-    {
-        base.OnRelease();
-
-        if (_networkObject.IsOwner == false)
-            return;
-
-        Adapter.OnChangedNetworkAttributeList -= OnChangedNetworkAttributeList;
     }
 
     protected override void OnBehaviour()
@@ -56,6 +44,34 @@ public class Hero : BattleCharacter
             return;
 
         base.OnFixedBehaviour();
+    }
+
+    protected override void OnChangedNetworkAttributeList(NetworkListEvent<NetworkAttributeData> networkListEvent, NetworkList<NetworkAttributeData> networkAttributeDatas)
+    {
+        base.OnChangedNetworkAttributeList(networkListEvent, networkAttributeDatas);
+
+        if (_networkObject.IsOwner == false)
+            return;
+
+        var sceneController = SceneController.Instance;
+        var uIService = sceneController.GetService<UIService>();
+        var uIBattlePanel = uIService.Get<UIBattlePanel>();
+        var networkAttributeData = networkListEvent.Value;
+        var attributeName = networkAttributeData.AttributeName;
+        switch (attributeName.ToString())
+        {
+            case SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_MaxHealth:
+                {
+                    uIBattlePanel.SetMaxHealth(networkAttributeData.CurrentValue);
+                }
+                break;
+
+            case SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Health:
+                {
+                    uIBattlePanel.SetHealth(networkAttributeData.CurrentValue);
+                }
+                break;
+        }
     }
 
     private void Update()
@@ -81,28 +97,5 @@ public class Hero : BattleCharacter
             return;
 
         OnFixedBehaviour();
-    }
-
-    private void OnChangedNetworkAttributeList(NetworkListEvent<NetworkAttributeData> networkListEvent, NetworkList<NetworkAttributeData> networkAttributeDatas)
-    {
-        var sceneController = SceneController.Instance;
-        var uIService = sceneController.GetService<UIService>();
-        var uIBattlePanel = uIService.Get<UIBattlePanel>();
-        var networkAttributeData = networkListEvent.Value;
-        var attributeName = networkAttributeData.AttributeName;
-        switch (attributeName.ToString())
-        {
-            case SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_MaxHealth:
-                {
-                    uIBattlePanel.SetMaxHealth(networkAttributeData.CurrentValue);
-                }
-                break;
-
-            case SurvivorsLikeGameplayTagContainer.SurvivorsLike_Attribute_Health:
-                {
-                    uIBattlePanel.SetHealth(networkAttributeData.CurrentValue);
-                }
-                break;
-        }
     }
 }

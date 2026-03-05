@@ -8,6 +8,9 @@ public static class UnityObjectExtension
     public static async void LoadScene(this UnityEngine.Object unityObject, int sceneIndex, LoadSceneMode loadSceneMode, Action<float> onUpdate = null, Action onCompleted = null)
     {
         var asyncOperation = SceneManager.LoadSceneAsync(sceneIndex, loadSceneMode);
+        if (asyncOperation.IsNull())
+            return;
+
         asyncOperation.allowSceneActivation = false;
 
         while (asyncOperation.progress < .9f)

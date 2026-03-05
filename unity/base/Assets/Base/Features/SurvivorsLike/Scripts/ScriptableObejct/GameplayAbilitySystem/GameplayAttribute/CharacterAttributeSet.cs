@@ -1,4 +1,5 @@
 using CycloneGames.GameplayAbilities.Runtime;
+using Unity.Netcode;
 using UnityEngine;
 
 public class CharacterAttributeSet : AttributeSet
@@ -28,6 +29,16 @@ public class CharacterAttributeSet : AttributeSet
         if (attribute == Health)
         {
             SetBaseValue(Health, System.Math.Clamp(GetBaseValue(Health), 0, GetCurrentValue(MaxHealth)));
+
+            if (Health.BaseValue == 0)
+            {
+                var asc = this.OwningAbilitySystemComponent;
+                var gameObject = asc.AvatarActor as GameObject;
+                if (gameObject.TryGetComponent<NetworkObject>(out var networkObject) == false)
+                    return;
+
+                networkObject.Despawn();
+            }
         }
     }
 }

@@ -103,6 +103,7 @@ MonoBehaviour:
   m_VerticalAlignment: 4096
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -171,7 +172,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 2}
+  m_AnchoredPosition: {x: 0, y: 1.5}
   m_SizeDelta: {x: 1.25, y: 0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2947620324892365383
@@ -305,6 +306,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0398d1d4aa5d4784aad59217cb0be994, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LobbyCharacter
-  _root: {fileID: 0}
-  _defaultWorldAsset: []
   _name: {fileID: 7616946160875194578}

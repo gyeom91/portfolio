@@ -139,3 +139,4 @@ MonoBehaviour:
   - Battle_Warrok
   _waitForSeconds: 3
   _spawnTime: 5
+  _maxSpawnMonster: 1
