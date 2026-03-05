@@ -19,7 +19,7 @@ public class UICharacterSelectToggle : UIToggle
 
         var sceneController = SceneController.Instance as LobbySceneController;
         var authenticationData = Node.Get<AuthenticationData>();
-        sceneController.DespawnPlayerCharacter();
+        sceneController.DespawnAllPlayerCharacter();
         sceneController.SpawnPlayerCharacter(authenticationData.PlayerID, authenticationData.PlayerName, 0, $"Lobby_{_characterName}");
     }
 }

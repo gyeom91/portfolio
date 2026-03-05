@@ -10,6 +10,10 @@ public class LobbySearchAction : FSMAction
     public override async Awaitable Enter()
     {
         var sceneController = SceneController.Instance as LobbySceneController;
+        var authenticationData = Node.Get<AuthenticationData>();
+        sceneController.DespawnAllPlayerCharacter();
+        sceneController.SpawnPlayerCharacter(authenticationData.PlayerID, authenticationData.PlayerName, 0, $"Lobby_{PlayerPrefs.GetString("CharacterName", "Archer")}");
+
         var lobbyActor = sceneController.LocalPlayer;
         lobbyActor?.SetEnableCanvas(false);
 
@@ -19,7 +23,6 @@ public class LobbySearchAction : FSMAction
 
         try
         {
-            var authenticationData = Get<AuthenticationData>();
             await LobbyManager.Instance.LeaveOrDelete(authenticationData.PlayerID);
 
             var options = new QueryLobbiesOptions()

@@ -10,7 +10,7 @@ public class LobbySceneController : SceneController
     [SerializeField] private Vector3 _spawnRotation;
     private List<(string, int, string, LobbyActor)> _players = new();
 
-    public void DespawnPlayerCharacter()
+    public void DespawnAllPlayerCharacter()
     {
         var poolService = GetService<PoolService>();
         var cinemachineService = GetService<CinemachineService>();

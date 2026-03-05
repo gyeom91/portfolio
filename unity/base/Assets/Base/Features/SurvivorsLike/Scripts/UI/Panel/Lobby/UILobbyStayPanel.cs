@@ -16,7 +16,7 @@ public class UILobbyStayPanel : UIPanel
     {
         var lobby = LobbyManager.Instance.Lobby;
         var sceneController = SceneController.Instance as LobbySceneController;
-        sceneController.DespawnPlayerCharacter();
+        sceneController.DespawnAllPlayerCharacter();
 
         var poolService = sceneController.GetService<PoolService>();
         var length = _uILobbyPlayerElements.Count;
